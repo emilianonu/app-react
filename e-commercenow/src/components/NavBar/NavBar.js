@@ -30,10 +30,9 @@ const NavBar = () => {
                   <button>Como Comprar</button>
                 </li>
               </ul>
+              
             </div>
-            <div className='carlist'>
-              <CartIcon />
-            </div>
+            
             <IconButton
               size="large"
               edge="start"
@@ -42,9 +41,10 @@ const NavBar = () => {
               sx={{ mr: 2 }}>
           
             </IconButton>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            </Typography>
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}></Typography>
+            
           </Toolbar>
+          <CartIcon />
         </AppBar>
     );
 }
