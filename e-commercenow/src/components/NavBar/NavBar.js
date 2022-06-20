@@ -44,7 +44,7 @@ const NavBar = () => {
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}></Typography>
             
           </Toolbar>
-          <CartIcon />
+          
         </AppBar>
     );
 }
