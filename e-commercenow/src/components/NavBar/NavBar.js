@@ -3,6 +3,7 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
+import CartIcon from '../CartIcon/CartIcon';
 
 
 
@@ -43,6 +44,7 @@ const NavBar = () => {
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}></Typography>
             
           </Toolbar>
+        
           
         </AppBar>
     );

@@ -7,18 +7,10 @@ import Modal from '../Modal/Modal';
 import ItemCount from '../ItemCount/ItemCount';
 
 
-const CardItem = ({image, title, price, stock}) => {
+const CardItem = ({image, title, price}) => {
     const [open, setOpen] = useState(false)
-    const [count, setCount] = useState(1)
     const handleClose = () => {
         setOpen(false)
-    }
-
-    const addCount = () =>{
-        setCount(count + 1)
-    }
-    const restCount = () =>{
-        setCount(count - 1)
     }
     return(
         <Card sx={{ minWidth: 275 }} className='card-item-container'>
@@ -30,7 +22,7 @@ const CardItem = ({image, title, price, stock}) => {
                     <p>{title}</p>
                     <span>$ {price}</span>
                     <div className='count-item'>
-                        <ItemCount/>
+                        <ItemCount stock={5} count={1}/>
                     </div>
                     <Button variant={'outlined'} onClick={() => setOpen(true)}>Detalle</Button>
                 </div>

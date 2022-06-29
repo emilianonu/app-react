@@ -1,23 +1,31 @@
+import './ItemCount.css'
 import { useState } from "react"
 import { Button } from '@mui/material';
 
-const ItemCount = ({count, setCantidad, setShowButton}) => {
+const ItemCount = ({stock}) => {
+        const [count, setCount] = useState(1);
+        const addCount = () => {
+            stock > count && setCount(count + 1);
+        }
+        const subsCount = () => {
+            count > 1 && setCount(count - 1);
+        }
 
-    const addProduct = () => {
-        setCantidad(count + 1)
+        const agregar = () => {
+            console.log(count);
+        }
+        return (
+            <>
+                <div className="itemCount">
+                    <Button size="small" variant="outlined" onClick={subsCount}>-</Button>
+                    <p>{count}</p>
+                    <Button size="small" variant="outlined" onClick={addCount}>+</Button>
+                
+                </div>
+                <button className="addcart" onClick={agregar}>Agregar al carrito</button>
+            </>
+        );
     }
 
-    return(
-        <>
-        <label>Selecciona cantidad</label>
-        <div style={{display: 'flex', justifyContent: 'space-between', margin: '20px 0'}}>
-            <button >-</button>
-            <p>{count}</p>
-            <button onClick={addProduct}>+</button>
-        </div>
-        <Button variant='outlined' onClick={() => setShowButton(true)}>Agregar producto</Button>
-        </>
-    )
-}
-
 export default ItemCount
+
